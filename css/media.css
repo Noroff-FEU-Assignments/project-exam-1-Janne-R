@@ -1,11 +1,17 @@
-@media (max-width: 800px) {
-}
-
-@media (max-width: 480px) {
-}
-
-@media (min-width: 414px) {
+@media (min-width: 480px) {
   .hero-text {
     margin-bottom: 36vh;
+  }
+  .hero-text p {
+    margin-right: 200px;
+  }
+  .button {
+    max-width: 350px;
+  }
+}
+
+@media (min-width: 800px) {
+  .hero-text p {
+    margin-right: 391px;
   }
 }
