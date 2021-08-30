@@ -1,10 +1,16 @@
 .hero {
-  background-image: url(../images/hero.jpg);
-  background-size: contain;
+  background-image: url(../images/mobile-hero.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 89vh;
 }
 
 .hero-text {
   margin: 10px;
+  margin-top: 75px;
+  margin-bottom: 116px;
+}
+
+.hero-text p {
+  margin-right: 163px;
 }
