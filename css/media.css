@@ -3,3 +3,9 @@
 
 @media (max-width: 480px) {
 }
+
+@media (min-width: 414px) {
+  .hero-text {
+    margin-bottom: 36vh;
+  }
+}
