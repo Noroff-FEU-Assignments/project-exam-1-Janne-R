@@ -42,10 +42,14 @@ h3 {
 .button {
   background-color: #fb6e4a;
   border-radius: 100px;
-  padding: 10px 100px;
+  padding: 10px 80px;
   text-transform: uppercase;
   text-decoration-line: none;
   color: black;
   font-family: var(--header-font);
+  margin: 10px;
+}
+
+.fa-chevron-right {
   margin: 10px;
 }
