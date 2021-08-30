@@ -1,11 +1,16 @@
+body {
+  margin: 0px;
+}
+
 .nav-menu {
   display: none;
 }
 
-header {
+.nav {
   display: flex;
   justify-content: space-between;
-  margin: 5px;
+  align-items: flex-end;
+  padding: 10px;
 }
 
 .logo {
