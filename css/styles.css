@@ -1,0 +1,13 @@
+.nav-menu {
+  display: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+.logo {
+  height: 50px;
+}
