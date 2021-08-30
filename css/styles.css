@@ -1,4 +1,26 @@
+@import "imports/variables.css";
+
 body {
+  font-family: var(--body-font), Helvetica, sans-serif;
+  font-size: 18px;
+  margin: 0px;
+}
+
+h1 {
+  font-family: var(--header-font), "Times New Roman", Times, serif;
+  font-size: 36px;
+  margin: 0px;
+}
+
+h2 {
+  font-family: var(--header-font), "Times New Roman", Times, serif;
+  font-size: 24px;
+  margin: 0px;
+}
+
+h3 {
+  font-family: var(--header-font), "Times New Roman", Times, serif;
+  font-size: 18px;
   margin: 0px;
 }
 
