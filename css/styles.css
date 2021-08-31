@@ -24,15 +24,21 @@ h3 {
   margin: 0px;
 }
 
-.nav-menu {
-  display: none;
-}
-
-.nav {
+.header-nav {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   padding: 10px;
+}
+
+.nav-bar-menu {
+  display: none;
+  margin: 0px;
+}
+
+.menu-link:first-child,
+.menu-link:nth-child(2) {
+  margin-right: 83px;
 }
 
 .logo {
@@ -43,11 +49,11 @@ h3 {
   background-color: #fb6e4a;
   border-radius: 100px;
   padding: 10px;
+  height: 20px;
   text-transform: uppercase;
   text-decoration-line: none;
   color: black;
   font-family: var(--header-font);
-  margin: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -56,4 +62,9 @@ h3 {
 
 .fa-chevron-right {
   margin: 10px;
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
 }

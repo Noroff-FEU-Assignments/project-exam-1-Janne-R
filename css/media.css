@@ -1,17 +1,27 @@
 @media (min-width: 480px) {
-  .hero-text {
-    margin-bottom: 36vh;
-  }
-  .hero-text p {
-    margin-right: 200px;
-  }
   .button {
     max-width: 350px;
   }
 }
 
 @media (min-width: 800px) {
-  .hero-text p {
-    margin-right: 391px;
+  i.fas.fa-bars {
+    display: none;
+  }
+
+  .nav-bar-menu {
+    display: flex;
+  }
+
+  .menu-link {
+    list-style-type: none;
+  }
+
+  .menu-link a {
+    font-family: var(--header-font), "Times New Roman", Times, serif;
+    font-size: 18px;
+    text-decoration-line: none;
+    color: black;
+    text-transform: uppercase;
   }
 }
