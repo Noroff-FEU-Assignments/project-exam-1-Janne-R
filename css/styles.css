@@ -2,25 +2,25 @@
 
 body {
   font-family: var(--body-font), Helvetica, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   margin: 0px;
 }
 
 h1 {
   font-family: var(--header-font), "Times New Roman", Times, serif;
-  font-size: 36px;
+  font-size: 32px;
   margin: 0px;
 }
 
 h2 {
   font-family: var(--header-font), "Times New Roman", Times, serif;
-  font-size: 24px;
+  font-size: 26px;
   padding: 20px 10px;
 }
 
 h3 {
   font-family: var(--header-font), "Times New Roman", Times, serif;
-  font-size: 18px;
+  font-size: 22px;
   margin: 0px;
 }
 
@@ -43,21 +43,6 @@ h3 {
 
 .logo {
   height: 50px;
-}
-
-.button {
-  background-color: #fb6e4a;
-  border-radius: 100px;
-  padding: 10px;
-  height: 20px;
-  text-transform: uppercase;
-  text-decoration-line: none;
-  color: black;
-  font-family: var(--header-font);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
 }
 
 .fa-chevron-right {
