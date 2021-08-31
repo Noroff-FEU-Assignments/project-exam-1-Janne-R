@@ -5,17 +5,8 @@
   height: 85vh;
 }
 
-.header-content {
-  max-width: 1000px;
-  margin: auto;
-}
-
 .header-content-text-web {
   display: none;
-}
-
-.header-content-text {
-  margin: 10px;
 }
 
 .header-content-text h1 {

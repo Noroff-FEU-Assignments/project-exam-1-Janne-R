@@ -1,15 +1,17 @@
 @media (min-width: 480px) {
-  .button {
+  .header-button {
     max-width: 350px;
   }
 }
 
 @media (min-width: 800px) {
+  section > * {
+    max-width: 1000px;
+    margin: auto;
+  }
+
   .header-hero {
     background-image: url(../images/hero.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
   }
 
   i.fas.fa-bars {
