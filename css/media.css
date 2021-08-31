@@ -2,10 +2,16 @@
   .header-button {
     max-width: 350px;
   }
+
+  .content-img {
+    height: 350px;
+  }
 }
 
 @media (min-width: 800px) {
-  section > * {
+  header,
+  main,
+  .footer-section {
     max-width: 1000px;
     margin: auto;
   }
@@ -36,5 +42,9 @@
 
   .header-content-text-web {
     display: block;
+  }
+
+  .content-img {
+    height: 500px;
   }
 }

@@ -1,0 +1,21 @@
+.content-img {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.img-jenny {
+  background-image: url(../images/jenny.jpg);
+  height: 220px;
+}
+
+.img-chicken-pot {
+  background-image: url(../images/chicken-one-pot.jpg);
+  height: 289px;
+}
+
+.content-block {
+  background-color: var(--color-tertiary);
+}

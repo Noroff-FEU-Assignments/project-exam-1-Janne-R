@@ -28,7 +28,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 10px;
+  margin-top: 10px;
 }
 
 .nav-bar-menu {
@@ -51,8 +51,9 @@ h3 {
 
 main,
 .footer-section,
-.header-content {
-  margin: 10px;
+.header-content,
+.footer-section {
+  padding: 0px 10px;
 }
 
 footer {
@@ -67,11 +68,14 @@ footer {
 footer a {
   text-decoration: none;
   color: black;
-  font-style: normal;
   margin-bottom: 10px;
 }
 
 .footer-some i {
   font-size: x-large;
   margin-right: 10px;
+}
+
+.footer-copyright p {
+  padding-bottom: 10px;
 }
