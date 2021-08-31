@@ -1,13 +1,17 @@
 .header-hero {
-  background-image: url(../images/mobile-hero.jpg);
+  background-image: url(../images/mobile-hero-2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 85vh;
 }
 
 .header-content {
   max-width: 1000px;
   margin: auto;
+}
+
+.header-content-text-web {
+  display: none;
 }
 
 .header-content-text {
@@ -18,8 +22,21 @@
   margin-top: 50px;
 }
 
-.header-content-text h1,
 .header-content-text p {
-  margin-bottom: 123px;
-  margin-right: 116px;
+  margin-right: 132px;
+}
+
+.header-button {
+  background-color: #fb6e4a;
+  border-radius: 100px;
+  padding: 10px;
+  height: 20px;
+  text-transform: uppercase;
+  text-decoration-line: none;
+  color: black;
+  font-family: var(--header-font);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
 }

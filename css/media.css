@@ -5,6 +5,13 @@
 }
 
 @media (min-width: 800px) {
+  .header-hero {
+    background-image: url(../images/hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+
   i.fas.fa-bars {
     display: none;
   }
@@ -23,5 +30,9 @@
     text-decoration-line: none;
     color: black;
     text-transform: uppercase;
+  }
+
+  .header-content-text-web {
+    display: block;
   }
 }
