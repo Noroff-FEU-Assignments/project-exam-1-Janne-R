@@ -1,5 +1,6 @@
 .content-img {
   width: 100%;
+  height: 220px;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -8,12 +9,15 @@
 
 .img-jenny {
   background-image: url(../images/jenny.jpg);
-  height: 220px;
 }
 
 .img-chicken-pot {
   background-image: url(../images/chicken-one-pot.jpg);
-  height: 289px;
+}
+
+.img-jenny-web {
+  background-image: url(../images/jenny-web.jpg);
+  display: none;
 }
 
 .content-block {
