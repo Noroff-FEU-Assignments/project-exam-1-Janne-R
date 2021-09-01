@@ -1,5 +1,5 @@
 @import "imports/variables.css";
-
+/*common-styles*/
 body {
   margin: 0px;
   font-family: "Open Sans", sans-serif;
@@ -76,6 +76,11 @@ footer a {
 .footer-some i {
   font-size: x-large;
   margin-right: 10px;
+}
+
+.footer-copyright {
+  font-weight: 100;
+  text-align: center;
 }
 
 .footer-copyright p {

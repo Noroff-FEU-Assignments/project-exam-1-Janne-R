@@ -6,15 +6,6 @@
 
 .content-img {
   width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-}
-
-.img-jenny {
-  background-image: url(../images/jenny.jpg);
-  height: 220px;
 }
 
 .content-block {

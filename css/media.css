@@ -13,14 +13,6 @@
   .content-intro p {
     margin-left: 10px;
   }
-
-  .img-jenny {
-    height: 350px;
-  }
-
-  .img-salmon-bowl {
-    height: 450px;
-  }
 }
 
 @media (min-width: 800px) {
@@ -61,16 +53,6 @@
   }
 
   /*about-page*/
-  .img-jenny,
-  .img-jenny-web,
-  .img-chefs-hat {
-    height: 500px;
-  }
-
-  .img-salmon-bowl {
-    height: 750px;
-  }
-
   .content-block {
     display: flex;
   }
@@ -96,5 +78,11 @@
   .recipe-block {
     display: grid;
     grid-template-columns: 1fr 2fr;
+  }
+
+  /*footer*/
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
   }
 }
