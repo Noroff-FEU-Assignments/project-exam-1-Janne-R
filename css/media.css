@@ -88,4 +88,9 @@
   .content-block {
     display: flex;
   }
+
+  .recipe-block {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
 }

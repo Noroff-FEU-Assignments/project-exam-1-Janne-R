@@ -42,10 +42,11 @@
   text-align: center;
 }
 
-.content-block-recipe h3 {
+.content-block-recipe h3,
+h4 {
   margin-top: 40px;
 }
 
-.content-block li {
+.recipe-block li {
   margin-bottom: 10px;
 }
