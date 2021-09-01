@@ -1,4 +1,13 @@
 @media (min-width: 480px) {
+  .content-intro {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .content-intro p {
+    margin-left: 10px;
+  }
+
   .header-button {
     max-width: 350px;
   }
@@ -56,10 +65,6 @@
 
   .img-salmon-bowl {
     height: 750px;
-  }
-
-  .content-block {
-    margin: 40px 0px;
   }
 
   .content-block-second {

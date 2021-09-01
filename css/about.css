@@ -6,7 +6,8 @@
   align-items: center;
 }
 
-.img-text {
+.img-text,
+.content-intro p {
   font-style: italic;
   margin-top: 0px;
 }
@@ -19,6 +20,10 @@
 .img-salmon-bowl {
   background-image: url(../images/salmon-bowl-2.jpg);
   height: 320px;
+}
+
+.content-block {
+  margin: 40px 0px;
 }
 
 .content-block img {
@@ -39,4 +44,8 @@
 
 .content-block-recipe h3 {
   margin-top: 40px;
+}
+
+.content-block li {
+  margin-bottom: 10px;
 }
