@@ -1,4 +1,10 @@
 @media (min-width: 480px) {
+  /*index-site*/
+  .header-button {
+    max-width: 350px;
+  }
+
+  /*about-site*/
   .content-intro {
     display: flex;
     align-items: flex-end;
@@ -6,10 +12,6 @@
 
   .content-intro p {
     margin-left: 10px;
-  }
-
-  .header-button {
-    max-width: 350px;
   }
 
   .img-jenny {
@@ -22,6 +24,7 @@
 }
 
 @media (min-width: 800px) {
+  /*index-site*/
   header,
   main,
   .footer-section {
@@ -57,6 +60,7 @@
     display: block;
   }
 
+  /*about-page*/
   .img-jenny,
   .img-jenny-web,
   .img-chefs-hat {
@@ -67,8 +71,8 @@
     height: 750px;
   }
 
-  .content-block-second {
-    flex-direction: row-reverse;
+  .content-block {
+    display: flex;
   }
 
   .content-block img {
@@ -81,12 +85,12 @@
     margin-right: 50px;
   }
 
-  .img-chefs-hat {
-    display: block;
+  .content-block-second {
+    flex-direction: row-reverse;
   }
 
-  .content-block {
-    display: flex;
+  .img-chefs-hat {
+    display: block;
   }
 
   .recipe-block {
