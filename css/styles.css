@@ -64,6 +64,14 @@ main,
   padding: 0px 10px;
 }
 
+.content-block {
+  margin: 40px 0px;
+}
+
+.content-img {
+  width: 100%;
+}
+
 footer {
   background-color: var(--color-quinary);
   position: absolute;
