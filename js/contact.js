@@ -85,4 +85,4 @@ function submitForm(event) {
 
 }
 
-submitForm();
+form.addEventListener("submit", submitForm);
