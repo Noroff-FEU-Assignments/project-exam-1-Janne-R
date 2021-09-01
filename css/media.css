@@ -3,8 +3,12 @@
     max-width: 350px;
   }
 
-  .content-img {
+  .img-jenny {
     height: 350px;
+  }
+
+  .img-salmon-bowl {
+    height: 450px;
   }
 }
 
@@ -44,11 +48,39 @@
     display: block;
   }
 
-  .content-img {
+  .img-jenny,
+  .img-jenny-web,
+  .img-chefs-hat {
     height: 500px;
   }
 
-  .img-jenny-web {
+  .img-salmon-bowl {
+    height: 750px;
+  }
+
+  .content-block {
+    margin: 40px 0px;
+  }
+
+  .content-block-second {
+    flex-direction: row-reverse;
+  }
+
+  .content-block img {
     display: block;
+    max-width: 40%;
+    height: fit-content;
+  }
+
+  .content-block-text {
+    margin-right: 50px;
+  }
+
+  .img-chefs-hat {
+    display: block;
+  }
+
+  .content-block {
+    display: flex;
   }
 }
