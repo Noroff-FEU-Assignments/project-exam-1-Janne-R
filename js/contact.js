@@ -81,8 +81,12 @@ message.addEventListener("keyup", validateForm);
 function submitForm(event) {
   event.preventDefault();
   messageContainer.innerHTML = '<div class="formMessage">Your message has been sent</div>';
+
   form.reset();
 
 }
 
 form.addEventListener("submit", submitForm);
+
+
+
