@@ -83,6 +83,7 @@ function submitForm(event) {
   messageContainer.innerHTML = '<div class="formMessage">Your message has been sent</div>';
 
   form.reset();
+  button.disabled = true;
 
 }
 
