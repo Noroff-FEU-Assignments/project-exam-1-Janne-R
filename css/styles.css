@@ -105,15 +105,6 @@ textarea {
   margin-bottom: 1rem;
 }
 
-button:disabled {
-  background: lightgray;
-}
-
-button:enabled {
-  background-color: var(--color-primary);
-  color: black;
-}
-
 button {
   border-radius: 100px;
   border: none;
@@ -128,7 +119,8 @@ button {
   margin-bottom: 20px;
 }
 
-.fa-chevron-right {
+.fa-chevron-right,
+.fa-plus {
   margin-left: 40px;
   margin-right: 0px;
 }

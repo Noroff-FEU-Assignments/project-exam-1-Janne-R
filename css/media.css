@@ -1,6 +1,5 @@
 @media (min-width: 480px) {
   /*index-site*/
-
   .header-button {
     max-width: 350px;
   }
@@ -18,7 +17,6 @@
 
 @media (min-width: 800px) {
   /*index-site*/
-
   h1 {
     font-size: 48px;
     margin-top: 50px;
@@ -98,6 +96,22 @@
   .recipe-block {
     display: grid;
     grid-template-columns: 1fr 2fr;
+  }
+
+  /*blog-post page*/
+  .button-filter {
+    width: 50%;
+  }
+
+  .blog-post-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .blog-post-section .button-filter {
+    margin-top: 50px;
+    margin-bottom: 39.84px;
   }
 
   /*footer*/
