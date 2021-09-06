@@ -34,6 +34,7 @@ function createHtml(details) {
   <h1>${details.title.rendered}</h1>
   <p>${details.excerpt.rendered}</p>
   <img src="${getImageUrl(details.featured_media, details._embedded["wp:featuredmedia"])}" alt="${details.title.rendered}">
+  <p>${details.content.rendered}</p>
 
   `;
 
