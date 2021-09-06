@@ -1,5 +1,3 @@
-
-
 const blogPosts = document.querySelector(".blog-posts");
 const url = "https://familykitchen.janne-ringdal.one/wp-json/wp/v2/posts?_embed";
 
@@ -22,19 +20,9 @@ function getImageUrl(featuredMediaId, featuredMediaList) {
 async function getPosts() {
   try {
     const response = await fetch(url);
-    const posts = await response.json();
+    const json = await response.json();
 
-    posts.forEach(function (post) {
-      console.log(post);
-      blogPosts.innerHTML += `
-      <img src="${getImageUrl(post.featured_media, post._embedded["wp:featuredmedia"])}" alt="${post.title.rendered}">
-    <h2> ${post.title.rendered}</h2 >
-    <p>${post.excerpt.rendered}</p>
-  
-    `;
-
-    });
-
+    return json;
 
   } catch (error) {
     console.error(error);
@@ -43,6 +31,15 @@ async function getPosts() {
   }
 }
 
+const postResult = await getPosts();
 
-getPosts();
+postResult.forEach(function (post) {
+  console.log(post);
+  blogPosts.innerHTML += `
+  <img src="${getImageUrl(post.featured_media, post._embedded["wp:featuredmedia"])}" alt="${post.title.rendered}">
+<h2> ${post.title.rendered}</h2 >
+<p>${post.excerpt.rendered}</p>
 
+`;
+
+});
