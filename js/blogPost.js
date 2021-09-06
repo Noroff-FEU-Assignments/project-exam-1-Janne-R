@@ -1,47 +1,7 @@
+import getImageUrl from "./lib/getImageUrl.js";
+
 const blogPosts = document.querySelector(".blog-posts");
 const baseUrl = "https://familykitchen.janne-ringdal.one/wp-json/wp/v2";
-
-
-function getImageUrl(featuredMediaId, featuredMediaList) {
-  let selectedMedia = null;
-
-  featuredMediaList.forEach(function (featuredMedia) {
-    if (featuredMedia.id === featuredMediaId) {
-      selectedMedia = featuredMedia;
-    }
-  });
-
-  if (selectedMedia) {
-    return selectedMedia.media_details.sizes.medium.source_url;
-  } else {
-    return "";
-  }
-}
-
-/*function getTagName(tagId, tagList) {
-  let selectedTag = null;
-
-  tagList.forEach(function (tag) {
-    if (tag.id === tagId) {
-      selectedTag = tag;
-    }
-
-  });
-
-  if (selectedTag) {
-    return selectedTag.name;
-  } else {
-    return "";
-  }
-
-}*/
-
-/*
-
-1. lag en getCategoryName funksjon som er asynkron og henter en kategori fra wordpress
-2. funksjonen må ta inn ett parameter categoryId, denne må legges på URLen slik at du får ut en enkelt kategori og ikke en liste av kategorier.
-3. Når du har hentet kategorien, kan du returnere ut navnet på kategorien
-*/
 
 async function getCategoryName(categoryId) {
   try {
@@ -56,7 +16,6 @@ async function getCategoryName(categoryId) {
   }
 
 }
-
 
 
 async function getPosts() {
@@ -90,3 +49,21 @@ postResult.forEach(async function (post) {
 `;
 
 });
+
+/*function getTagName(tagId, tagList) {
+  let selectedTag = null;
+
+  tagList.forEach(function (tag) {
+    if (tag.id === tagId) {
+      selectedTag = tag;
+    }
+
+  });
+
+  if (selectedTag) {
+    return selectedTag.name;
+  } else {
+    return "";
+  }
+
+}*/
