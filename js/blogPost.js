@@ -1,88 +1,43 @@
-/*const blogPosts = document.querySelector(".blog-posts");
-const url = "https://familykitchen.janne-ringdal.one/wp-json/wp/v2/posts/?per_page=20";
 
 
+const blogPosts = document.querySelector(".blog-posts");
+const url = "https://familykitchen.janne-ringdal.one/wp-json/wp/v2/posts?_embed";
 
+function getImageUrl(featuredMediaId, featuredMediaList) {
+  let selectedMedia = null;
 
-async function getPosts() {
-  try {
-    const response = await fetch(url);
-    const json = await response.json();
+  featuredMediaList.forEach(function (featuredMedia) {
+    if (featuredMedia.id === featuredMediaId) {
+      selectedMedia = featuredMedia;
+    }
+  });
 
-    console.log(json);
-
-    const posts = json[0];
-
-    posts.forEach(function (result) {
-      blogPosts.innerHTML +=
-        `
-        <h2>${result.title}</h2>
-      `;
-    })
-
-
-
-  } catch (error) {
-    blogPosts.innerHTML = "error";
-
+  if (selectedMedia) {
+    return selectedMedia.media_details.sizes.medium.source_url;
+  } else {
+    return "";
   }
 }
 
-
-getPosts();*/
-
-/*
-
-const blogPosts = document.querySelector(".blog-posts");
-const url = "https://familykitchen.janne-ringdal.one/wp-json/wp/v2/posts/?per_page=20";
-
 async function getPosts() {
   try {
     const response = await fetch(url);
-    const json = await response.json();
+    const posts = await response.json();
 
-    console.log(json);
-    return json[0];
-
-
-  } catch (error) {
-    blogPosts.innerHTML = "error";
-
-  }
-}
-
-
-const results = getPosts();
-
-results.forEach(function (result) {
-  blogPosts.innerHTML +=
-    `
-      <h2>${result[0].title}</h2>
- `;
-
-}
-);*/
-
-const blogPosts = document.querySelector(".blog-posts");
-const url = "https://familykitchen.janne-ringdal.one/wp-json/wp/v2/posts/?per_page=20";
-
-async function getPosts() {
-  try {
-    const response = await fetch(url);
-    const json = await response.json();
-
-    console.log(json);
-
-    json.forEach(function (result) {
+    posts.forEach(function (post) {
+      console.log(post);
       blogPosts.innerHTML += `
-   
-      <h2>${json[0].title.rendered}</h2>
+      <img src="${getImageUrl(post.featured_media, post._embedded["wp:featuredmedia"])}" alt="${post.title.rendered}">
+    <h2> ${post.title.rendered}</h2 >
+    <p>${post.excerpt.rendered}</p>
+  
     `;
 
     });
 
 
   } catch (error) {
+    console.error(error);
     blogPosts.innerHTML = "error";
 
   }
