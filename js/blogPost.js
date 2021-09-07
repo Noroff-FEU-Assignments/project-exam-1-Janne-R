@@ -40,12 +40,18 @@ postResult.forEach(async function (post) {
   console.log(post);
 
   blogPosts.innerHTML += `
+  <div class="post">
   <a href="blog-specific.html?id=${post.id}">
-  <img src="${getImageUrl(post.featured_media, post._embedded["wp:featuredmedia"])}" alt="${post.title.rendered}">
-<h2>${post.title.rendered}</h2>
+  <div class="blog-post-image" style="background-image: url(${getImageUrl(post.featured_media, post._embedded["wp:featuredmedia"])})"></div>
+<div>
+  <h2>${post.title.rendered}</h2>
 <p>${post.excerpt.rendered}</p>
+</div>
+
 <p><i class="far fa-clock"></i>${categoryName}</p>
+
 </a>
+</div>
 `;
 
 });

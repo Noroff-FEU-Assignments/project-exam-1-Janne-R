@@ -13,6 +13,11 @@
   .content-intro p {
     margin-left: 10px;
   }
+
+  /*blog-post-page*/
+  .blog-post-image {
+    height: 280px;
+  }
 }
 
 @media (min-width: 800px) {
@@ -35,15 +40,12 @@
     font-size: 18px;
   }
 
-  header,
+  .header-nav,
+  .header-content-text,
   main,
   .footer-section {
     max-width: 1000px;
     margin: auto;
-  }
-
-  .header-hero {
-    background-image: url(../images/hero.jpg);
   }
 
   i.fas.fa-bars {
@@ -64,10 +66,6 @@
     text-decoration-line: none;
     color: black;
     text-transform: uppercase;
-  }
-
-  .header-content-text-web {
-    display: block;
   }
 
   /*about-page*/
@@ -112,6 +110,16 @@
   .blog-post-section .button-filter {
     margin-top: 50px;
     margin-bottom: 39.84px;
+  }
+
+  .blog-posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 14px;
+  }
+
+  .blog-post-image {
+    height: 150px;
   }
 
   /*footer*/
