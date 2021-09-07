@@ -8,13 +8,6 @@
   display: none;
 }
 
-.content-stripe {
-  background-color: var(--color-tertiary);
-  padding: 16px;
-  font-style: italic;
-  text-align: center;
-}
-
 .img-chefs-hat {
   background-image: url(../images/chefs-hat.png);
   display: none;
