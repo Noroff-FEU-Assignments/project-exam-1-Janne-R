@@ -43,13 +43,13 @@ postResult.forEach(async function (post) {
   <div class="post">
   <a href="blog-specific.html?id=${post.id}">
   <div class="blog-post-image" style="background-image: url(${getImageUrl(post.featured_media, post._embedded["wp:featuredmedia"])})"></div>
-<div>
+<div class="post-text">
   <h2>${post.title.rendered}</h2>
 <p>${post.excerpt.rendered}</p>
-</div>
+
 
 <p><i class="far fa-clock"></i>${categoryName}</p>
-
+</div>
 </a>
 </div>
 `;
