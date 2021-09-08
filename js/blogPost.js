@@ -3,6 +3,7 @@ import getImageUrl from "./lib/getImageUrl.js";
 const blogPosts = document.querySelector(".blog-posts");
 const baseUrl = "https://familykitchen.janne-ringdal.one/wp-json/wp/v2";
 
+
 async function getCategoryName(categoryId) {
   try {
     const response = await fetch(`${baseUrl}/categories/${categoryId}`);
@@ -16,7 +17,6 @@ async function getCategoryName(categoryId) {
   }
 
 }
-
 
 async function getPosts() {
   try {
@@ -46,8 +46,6 @@ postResult.forEach(async function (post) {
 <div class="post-text">
   <h2>${post.title.rendered}</h2>
 <p>${post.excerpt.rendered}</p>
-
-
 <p><i class="far fa-clock"></i>${categoryName}</p>
 </div>
 </a>
@@ -55,6 +53,36 @@ postResult.forEach(async function (post) {
 `;
 
 });
+
+
+
+
+
+const button = document.querySelector(".button");
+
+async function getMorePosts() {
+  try {
+    const response = await fetch(`${baseUrl}/posts?page=2`);
+    const json = await response.json();
+    console.log(json);
+
+    return json;
+
+
+  } catch (error) {
+    console.error(error);
+    blogPosts.innerHTML = "error";
+
+  }
+}
+
+
+
+button.addEventListener("click", getMorePosts);
+
+
+
+
 
 /*function getTagName(tagId, tagList) {
   let selectedTag = null;
