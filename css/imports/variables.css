@@ -1,10 +1,7 @@
 :root {
-  --color-primary:#FB6E4A;
-  --color-secondary: #DC7F4C;
-  --color-tertiary:#F5B677;
-  --color-quaternary:#F9DD69;
-  --color-quinary:#FBF3D1;
-}
-
-  
+  --color-primary: #fb6e4a;
+  --color-secondary: #dc7f4c;
+  --color-tertiary: #f5b677;
+  --color-quaternary: #f9dd69;
+  --color-quinary: #fbf3d1;
 }

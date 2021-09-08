@@ -47,14 +47,42 @@ main,
 
 .header-nav {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: flex-end;
+  justify-content: space-between;
   padding-top: 10px;
 }
 
-.nav-bar-menu {
+.hamburger {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.hamburger:focus {
+  outline: none;
+}
+
+.nav-ul {
   display: none;
-  margin: 0px;
+  flex-direction: column;
+}
+
+.nav-ul.show {
+  display: flex;
+}
+
+.menu-link {
+  list-style-type: none;
+}
+
+.menu-link a {
+  font-family: var(--header-font), "Times New Roman", Times, serif;
+  font-size: 18px;
+  text-decoration-line: none;
+  color: black;
+  text-transform: uppercase;
 }
 
 .menu-link:first-child,

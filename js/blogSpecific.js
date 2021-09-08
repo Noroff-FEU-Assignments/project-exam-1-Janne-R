@@ -7,7 +7,6 @@ const params = new URLSearchParams(queryString);
 
 const id = params.get("id");
 
-
 const url = "https://familykitchen.janne-ringdal.one/wp-json/wp/v2/posts/" + id + "?_embed";
 
 async function getBlogPost() {
@@ -79,13 +78,11 @@ const validfullName = () => {
   }
 };
 
-
 const validateEmail = email => {
   const regEx = /\S+@\S+\.\S+/;
   const patternMatches = regEx.test(email);
   return patternMatches;
 }
-
 
 const validEmail = () => {
   if (validateEmail(email.value)) {
@@ -109,7 +106,6 @@ const validateForm = () => {
 message.addEventListener("keyup", validateForm);
 fullName.addEventListener("keyup", validateForm);
 email.addEventListener("keyup", validateForm);
-
 
 function submitForm(event) {
   event.preventDefault();

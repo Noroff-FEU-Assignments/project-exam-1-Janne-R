@@ -4,8 +4,6 @@ const blogPosts = document.querySelector(".blog-posts");
 const baseUrl = "https://familykitchen.janne-ringdal.one/wp-json/wp/v2";
 const button = document.querySelector(".button");
 
-
-
 async function getCategoryName(categoryId) {
   try {
     const response = await fetch(`${baseUrl}/categories/${categoryId}`);
@@ -19,9 +17,6 @@ async function getCategoryName(categoryId) {
   }
 
 }
-
-
-
 
 async function getPosts(pageNumber) {
   try {

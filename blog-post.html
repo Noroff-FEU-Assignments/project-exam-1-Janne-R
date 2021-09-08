@@ -17,18 +17,18 @@
 <body>
   <header class="header-sticky">
     <div class="header-content">
-      <div class="header-nav">
+      <nav class="header-nav">
         <a href="index.html"><img class="logo" src="images/logo.svg"
             alt="Family Kitchen tex with a image of a knife, fork and spoon above"></a>
-        <nav class="nav-bar">
+        <button class="hamburger" id="hamburger">
           <i class="fas fa-bars"></i>
-          <ul class="nav-bar-menu">
-            <li class="menu-link"><a href="about.html">About</a></li>
-            <li class="menu-link"><a href="blog-post.html">Blog posts</a></li>
-            <li class="menu-link"><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
+        </button>
+        <ul class="nav-ul">
+          <li class="menu-link"><a href="about.html">About</a></li>
+          <li class="menu-link"><a href="blog-post.html">Blog posts</a></li>
+          <li class="menu-link"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
   <main>
@@ -36,11 +36,8 @@
       <h1>Blog posts</h1>
       <button class="button-filter">Add filter<i class="fas fa-plus"></i></button>
     </section>
-    <section class="blog-posts">
-
-    </section>
+    <section class="blog-posts"></section>
     <button class="button">View more <i class="fas fa-chevron-right"></i></button>
-
   </main>
   <footer>
     <section class="footer-section">
@@ -64,6 +61,7 @@
       </div>
     </section>
   </footer>
+  <script src="js/script.js"></script>
   <script type="module" src="js/blogPost.js"></script>
 </body>
 

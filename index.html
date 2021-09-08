@@ -19,33 +19,22 @@
 </head>
 
 <body>
-  <header class="header-hero">
-    <section class="header-content">
-      <div class="header-nav">
+  <header class="header-sticky">
+    <div class="header-content">
+      <nav class="header-nav">
         <a href="index.html"><img class="logo" src="images/logo.svg"
             alt="Family Kitchen tex with a image of a knife, fork and spoon above"></a>
-        <nav class="nav-bar">
+        <button class="hamburger" id="hamburger">
           <i class="fas fa-bars"></i>
-          <ul class="nav-bar-menu">
-            <li class="menu-link"><a href="about.html">About</a></li>
-            <li class="menu-link"><a href="blog-post.html">Blog posts</a></li>
-            <li class="menu-link"><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </section>
-    <section class="header-content-text">
-      <h1>What to eat for dinner?</h1>
-      <div>
-        <p>Tasteful dinner recipes for the busy family.</p>
-        <p>Get your new inspiration for today's dinner here!</p>
-      </div>
-      <div>
-        <a href="blog-post.html" class="header-button">Recipes <i class="fas fa-chevron-right"></i></a>
-      </div>
-    </section>
+        </button>
+        <ul class="nav-ul">
+          <li class="menu-link"><a href="about.html">About</a></li>
+          <li class="menu-link"><a href="blog-post.html">Blog posts</a></li>
+          <li class="menu-link"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-
   <main>
     <section class="post-according">
       <h2>Latest posts</h2>
@@ -53,9 +42,6 @@
     <section class="post-accordion">
       <figure class="selected-post"></figure>
     </section>
-
-
-
   </main>
   <footer>
     <section class="footer-section">
@@ -79,7 +65,8 @@
       </div>
     </section>
   </footer>
-  <script type="module" src="js/script.js"></script>
+  <script src="js/script.js"></script>
+  <script type="module" src="js/index.js"></script>
 </body>
 
 </html> 

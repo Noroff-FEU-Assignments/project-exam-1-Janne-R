@@ -48,24 +48,17 @@
     margin: auto;
   }
 
-  i.fas.fa-bars {
+  .header-nav {
+    flex-wrap: nowrap;
+  }
+
+  .hamburger {
     display: none;
   }
 
-  .nav-bar-menu {
+  .nav-ul {
     display: flex;
-  }
-
-  .menu-link {
-    list-style-type: none;
-  }
-
-  .menu-link a {
-    font-family: var(--header-font), "Times New Roman", Times, serif;
-    font-size: 18px;
-    text-decoration-line: none;
-    color: black;
-    text-transform: uppercase;
+    flex-direction: row;
   }
 
   /*about-page*/
