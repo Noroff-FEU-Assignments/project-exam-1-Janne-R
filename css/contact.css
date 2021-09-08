@@ -1,8 +1,0 @@
-.button:disabled {
-  background: lightgray;
-}
-
-.button:enabled {
-  background-color: var(--color-primary);
-  color: black;
-}

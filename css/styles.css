@@ -130,6 +130,15 @@ button {
   scroll-margin-top: 70px;
 }
 
+.button:disabled {
+  background: lightgray;
+}
+
+.button:enabled {
+  background-color: var(--color-primary);
+  color: black;
+}
+
 /*footer*/
 footer {
   background-color: var(--color-quinary);

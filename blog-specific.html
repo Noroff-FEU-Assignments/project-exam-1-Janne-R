@@ -33,9 +33,26 @@
   </header>
   <main>
     <section class="specific-section">
-
     </section>
-
+    <section>
+      <h2>Leave a comment</h2>
+      <div id="successMessageComment" class="messageContainer avoid-sticky-header"></div>
+      <form action="">
+        <div class="form-wrapper">
+          <label for="message">Message (minimum 25 characters)</label>
+          <textarea name="message" id="message" cols="30" rows="10" placeholder="Comment"></textarea></textarea>
+          <div class="form-error" id="messageError">Your message must be at least 25 characters</div>
+          <label for="name">Name (required)</label>
+          <input type="text" id="name" name="Name" placeholder="Full name">
+          <div class="form-error" id="nameError">Your name must be at least 3 characters</div>
+          <label for="email">Email (required)</label>
+          <input type="email" id="email" name="email" placeholder="example@mail.com">
+          <div class="form-error" id="emailError">Please enter a valid email</div>
+        </div>
+        <button onclick="location.href='#successMessageComment'" disabled class="button">Submit <i
+            class="fas fa-chevron-right"></i></button>
+      </form>
+    </section>
   </main>
   <footer>
     <section class="footer-section">
