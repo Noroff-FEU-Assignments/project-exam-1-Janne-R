@@ -70,11 +70,16 @@ main,
 }
 
 .nav-ul.show {
-  display: flex;
+  display: block;
+  position: absolute;
+  top: 48px;
+  right: 0px;
+  background: white;
 }
 
 .menu-link {
   list-style-type: none;
+  padding: 12px;
 }
 
 .menu-link a {
