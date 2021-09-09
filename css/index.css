@@ -27,3 +27,13 @@ body {
 .latest-posts {
   grid-template-columns: 1fr;
 }
+
+.carousel {
+  display: flex;
+}
+
+.carousel-button-left,
+.carousel-button-right {
+  align-self: center;
+  font-size: xx-large;
+}

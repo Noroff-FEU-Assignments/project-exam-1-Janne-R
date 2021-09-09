@@ -7,7 +7,7 @@ async function getCategoryName(categoryId) {
   try {
     const response = await fetch(`${baseUrl}/categories/${categoryId}`);
     const category = await response.json();
-    console.log(category);
+    //console.log(category);
 
     return category.name;
   } catch (error) {
@@ -36,15 +36,23 @@ const arrowRightButton = document.querySelector(".carousel-button-right");
 
 const postResult = await getPosts();
 
+let fuckingHell = 0;
 function showCarousel(startPos, endPos) {
-  const activeSelection = postResult.slice(startPos, endPos);
+  if (fuckingHell === startPos + endPos) {
+    return;
+  }
 
+  fuckingHell = startPos + endPos;
+
+  console.log("START AND END", startPos, endPos);
+  const activeSelection = postResult.slice(startPos, endPos);
+  console.log("slice", activeSelection);
   latestPosts.innerHTML = "";
 
   activeSelection.forEach(async function (post) {
     const categoryName = await getCategoryName(post.categories[0]);
 
-    console.log(post);
+    //console.log(post); 
 
     latestPosts.innerHTML += `
   <div class="post">
@@ -67,19 +75,26 @@ let endPos = 1;
 let numberOfPosts = 1;
 
 function updateForDevice() {
-  console.log("hello");
-  if (window.innerWidth > 480 && window.innerWidth <= 800) {
+  console.log(window.innerWidth);
+  if (window.innerWidth < 480) {
+    console.log("ONE");
+    numberOfPosts = 1;
+    endPos = 1;
+    showCarousel(startPos, endPos);
+  } else if (window.innerWidth > 480 && window.innerWidth <= 800) {
+    console.log("TWO");
     numberOfPosts = 2;
     endPos = 2;
+    showCarousel(startPos, endPos);
   } else if (window.innerWidth > 800) {
+    console.log("FOUR");
     numberOfPosts = 4;
     endPos = 4;
+    showCarousel(startPos, endPos);
   }
 }
 
 updateForDevice();
-
-showCarousel(startPos, endPos);
 
 function goNext() {
   startPos = startPos + numberOfPosts;
@@ -101,4 +116,6 @@ function goPrevious() {
 
 arrowRightButton.addEventListener("click", goNext);
 arrowLeftButton.addEventListener("click", goPrevious);
+
+window.addEventListener('resize', updateForDevice);
 
