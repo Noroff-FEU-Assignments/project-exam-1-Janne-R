@@ -18,6 +18,10 @@
   .blog-post-image {
     height: 280px;
   }
+
+  .latest-posts {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (min-width: 800px) {
