@@ -32,7 +32,9 @@ function createHtml(details) {
   <p class="date">${details.date}</p>
   <h1>${details.title.rendered}</h1>
   <p>${details.excerpt.rendered}</p>
-  <img src="${getImageUrl(details.featured_media, details._embedded["wp:featuredmedia"])}" alt="${details.title.rendered}">
+
+  <div class="modal-img" style="background-image: url(${getImageUrl(details.featured_media, details._embedded["wp:featuredmedia"])})"></div>
+  
 
   <p>${details.content.rendered}</p>
 

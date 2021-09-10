@@ -22,6 +22,11 @@
   .latest-posts {
     grid-template-columns: 1fr 1fr;
   }
+
+  /*blog-post-spesific-page*/
+  .modal-img {
+    height: 350px;
+  }
 }
 
 @media (min-width: 800px) {
@@ -122,6 +127,11 @@
 
   .blog-post-image {
     height: 150px;
+  }
+
+  /*blog-post-spesific-page*/
+  .modal-img {
+    height: 500px;
   }
 
   /*footer*/

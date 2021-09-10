@@ -20,20 +20,18 @@
   cursor: pointer;
 }
 
-body {
-  background-color: #f2f2f2;
-}
-
 .latest-posts {
   grid-template-columns: 1fr;
 }
 
 .carousel {
   display: flex;
+  justify-content: center;
 }
 
 .carousel-button-left,
 .carousel-button-right {
   align-self: center;
   font-size: xx-large;
+  background-color: transparent;
 }
