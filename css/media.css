@@ -24,8 +24,10 @@
   }
 
   /*blog-post-spesific-page*/
-  .modal-img {
-    height: 350px;
+
+  /*modal*/
+  .img01 {
+    height: 70vh;
   }
 }
 
@@ -130,8 +132,18 @@
   }
 
   /*blog-post-spesific-page*/
-  .modal-img {
-    height: 500px;
+
+  /*modal*/
+  .modalImg {
+    height: 75vh;
+  }
+
+  .modal-content {
+    max-width: 90%;
+  }
+
+  .img01 {
+    height: 80vh;
   }
 
   /*footer*/

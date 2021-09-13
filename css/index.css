@@ -22,10 +22,12 @@
 
 .latest-posts {
   grid-template-columns: 1fr;
+  width: 100%;
 }
 
 .carousel {
   display: flex;
+  min-height: 470px;
   justify-content: center;
 }
 

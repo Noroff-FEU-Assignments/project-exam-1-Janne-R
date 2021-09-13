@@ -8,7 +8,6 @@ async function getCategoryName(categoryId) {
   try {
     const response = await fetch(`${baseUrl}/categories/${categoryId}`);
     const category = await response.json();
-    console.log(category);
 
     return category.name;
   } catch (error) {
@@ -46,7 +45,7 @@ async function viewBlogPosts() {
     blogPosts.innerHTML += `
     <div class="post">
     <a href="blog-specific.html?id=${post.id}">
-    <div class="blog-post-image" style="background-image: url(${getImageUrl(post.featured_media, post._embedded["wp:featuredmedia"])})"></div>
+    <div class="blog-post-image" style="background-image: url(${getImageUrl("medium", post.featured_media, post._embedded["wp:featuredmedia"])})"></div>
   <div class="post-text">
     <h2>${post.title.rendered}</h2>
   <p>${post.excerpt.rendered}</p>

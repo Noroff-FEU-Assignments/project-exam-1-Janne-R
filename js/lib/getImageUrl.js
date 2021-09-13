@@ -1,4 +1,4 @@
-export default function getImageUrl(featuredMediaId, featuredMediaList) {
+export default function getImageUrl(version, featuredMediaId, featuredMediaList) {
   let selectedMedia = null;
 
   featuredMediaList.forEach(function (featuredMedia) {
@@ -8,7 +8,7 @@ export default function getImageUrl(featuredMediaId, featuredMediaList) {
   });
 
   if (selectedMedia) {
-    return selectedMedia.media_details.sizes.full.source_url;
+    return selectedMedia.media_details.sizes[version].source_url;
   } else {
     return "";
   }

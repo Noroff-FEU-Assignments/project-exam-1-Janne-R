@@ -7,14 +7,12 @@ async function getCategoryName(categoryId) {
   try {
     const response = await fetch(`${baseUrl}/categories/${categoryId}`);
     const category = await response.json();
-    //console.log(category);
 
     return category.name;
   } catch (error) {
     console.error(error);
     blogPosts.innerHTML = "error";
   }
-
 }
 
 async function getPosts() {
@@ -23,7 +21,6 @@ async function getPosts() {
     const json = await response.json();
 
     return json;
-
   } catch (error) {
     console.error(error);
     blogPosts.innerHTML = "error";
@@ -36,28 +33,24 @@ const arrowRightButton = document.querySelector(".carousel-button-right");
 
 const postResult = await getPosts();
 
-let fuckingHell = 0;
+let oldPosition = 0;
 function showCarousel(startPos, endPos) {
-  if (fuckingHell === startPos + endPos) {
+  if (oldPosition === startPos + endPos) {
     return;
   }
 
-  fuckingHell = startPos + endPos;
+  oldPosition = startPos + endPos;
 
-  console.log("START AND END", startPos, endPos);
   const activeSelection = postResult.slice(startPos, endPos);
-  console.log("slice", activeSelection);
   latestPosts.innerHTML = "";
 
   activeSelection.forEach(async function (post) {
     const categoryName = await getCategoryName(post.categories[0]);
 
-    //console.log(post); 
-
     latestPosts.innerHTML += `
   <div class="post">
   <a href="blog-specific.html?id=${post.id}">
-  <div class="blog-post-image" style="background-image: url(${getImageUrl(post.featured_media, post._embedded["wp:featuredmedia"])})"></div>
+  <div class="blog-post-image" style="background-image: url(${getImageUrl("medium", post.featured_media, post._embedded["wp:featuredmedia"])})"></div>
 <div class="post-text">
   <h2>${post.title.rendered}</h2>
 <p>${post.excerpt.rendered}</p>
@@ -75,19 +68,15 @@ let endPos = 1;
 let numberOfPosts = 1;
 
 function updateForDevice() {
-  console.log(window.innerWidth);
   if (window.innerWidth < 480) {
-    console.log("ONE");
     numberOfPosts = 1;
     endPos = 1;
     showCarousel(startPos, endPos);
   } else if (window.innerWidth > 480 && window.innerWidth <= 800) {
-    console.log("TWO");
     numberOfPosts = 2;
     endPos = 2;
     showCarousel(startPos, endPos);
   } else if (window.innerWidth > 800) {
-    console.log("FOUR");
     numberOfPosts = 4;
     endPos = 4;
     showCarousel(startPos, endPos);
