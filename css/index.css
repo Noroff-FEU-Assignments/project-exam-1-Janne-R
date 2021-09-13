@@ -27,7 +27,6 @@
 
 .carousel {
   display: flex;
-  min-height: 470px;
   justify-content: center;
 }
 

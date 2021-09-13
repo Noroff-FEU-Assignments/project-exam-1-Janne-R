@@ -33,23 +33,6 @@
 
 @media (min-width: 800px) {
   /*index-site*/
-  h1 {
-    font-size: 48px;
-    margin-top: 50px;
-    text-transform: uppercase;
-  }
-
-  h2 {
-    font-size: 36px;
-  }
-
-  h3 {
-    font-size: 28px;
-  }
-
-  h4 {
-    font-size: 18px;
-  }
 
   .header-nav,
   .header-content-text,
