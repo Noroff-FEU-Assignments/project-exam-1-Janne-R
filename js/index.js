@@ -52,7 +52,7 @@ function showCarousel(startPos, endPos) {
   <a href="blog-specific.html?id=${post.id}">
   <div class="blog-post-image" style="background-image: url(${getImageUrl("medium", post.featured_media, post._embedded["wp:featuredmedia"])})"></div>
 <div class="post-text">
-  <h2>${post.title.rendered}</h2>
+  <h3>${post.title.rendered}</h3>
 <p>${post.excerpt.rendered}</p>
 <p><i class="far fa-clock"></i>${categoryName}</p>
 </div>

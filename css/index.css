@@ -3,6 +3,13 @@
   background-size: cover;
   background-repeat: no-repeat;
   height: 75vh;
+
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
 .header-button {
