@@ -27,7 +27,7 @@ await getBlogPost();
 
 
 function createHtml(details) {
-  document.title = document.title.innerHTML + details.title.rendered;
+  document.title = document.title + " " + details.title.rendered;
   detailContainer.innerHTML = `
   <p class="date">${details.date}</p>
   <h1>${details.title.rendered}</h1>
