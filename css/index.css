@@ -1,15 +1,19 @@
 .hero {
-  background-image: url(../images/test.jpg);
+  background-image: url(../images/header-hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 75vh;
-
+  height: 60vh;
   width: 100vw;
   position: relative;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+}
+
+.hero-text {
+  padding-top: 1px;
+  margin-right: 120px;
 }
 
 .header-button {

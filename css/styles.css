@@ -31,7 +31,8 @@ main,
 .header-content-text,
 .footer-section,
 .header-content,
-.footer-section {
+.footer-section,
+.hero > * {
   padding: 0px 10px;
 }
 
