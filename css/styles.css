@@ -36,6 +36,10 @@ main,
   padding: 0px 10px;
 }
 
+main {
+  min-height: 700px;
+}
+
 /*header*/
 .header-sticky {
   background-color: white;

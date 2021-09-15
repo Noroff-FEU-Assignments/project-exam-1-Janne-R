@@ -27,3 +27,7 @@ label {
   position: absolute;
   background-color: white;
 }
+
+input {
+  margin-right: 10px;
+}
