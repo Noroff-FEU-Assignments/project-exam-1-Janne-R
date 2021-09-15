@@ -61,6 +61,14 @@ viewBlogPosts();
 
 button.addEventListener("click", viewBlogPosts);
 
+//Filter
+const filterButton = document.querySelector(".button-filter");
+const filterList = document.querySelector(".filters");
+
+filterButton.addEventListener("click", () => {
+  filterList.classList.toggle("show");
+
+});
 
 
 

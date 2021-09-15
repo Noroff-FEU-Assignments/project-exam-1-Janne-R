@@ -101,9 +101,6 @@
   }
 
   /*blog-post page*/
-  .button-filter {
-    width: 50%;
-  }
 
   .blog-post-section {
     display: flex;
@@ -113,7 +110,7 @@
 
   .blog-post-section .button-filter {
     margin-top: 50px;
-    margin-bottom: 39.84px;
+    width: 350px;
   }
 
   .blog-posts {

@@ -1,0 +1,12 @@
+.blog-post-image {
+  height: 200px;
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: flex;
+}
+
+.post {
+  margin: 10px;
+}
