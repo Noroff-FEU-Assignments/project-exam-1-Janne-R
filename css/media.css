@@ -53,7 +53,8 @@
   .header-content-text,
   main,
   .footer-section,
-  .hero-text {
+  .hero-text,
+  .loader-container {
     max-width: 1000px;
     margin: auto;
   }
