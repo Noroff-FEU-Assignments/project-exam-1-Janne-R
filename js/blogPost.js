@@ -1,21 +1,10 @@
 import getImageUrl from "./lib/getImageUrl.js";
+import getCategoryName from "./lib/getCategoryName.js";
 
 const blogPosts = document.querySelector(".blog-posts");
 const baseUrl = "https://familykitchen.janne-ringdal.one/wp-json/wp/v2";
 const button = document.querySelector(".button");
 
-async function getCategoryName(categoryId) {
-  try {
-    const response = await fetch(`${baseUrl}/categories/${categoryId}`);
-    const category = await response.json();
-
-    return category.name;
-  } catch (error) {
-    console.error(error);
-    blogPosts.innerHTML = "error";
-  }
-
-}
 
 async function getPosts(pageNumber) {
   try {

@@ -7,7 +7,7 @@ const subject = document.querySelector("#subject");
 const subjectError = document.querySelector("#subjectError");
 const message = document.querySelector("#message");
 const messageError = document.querySelector("#messageError");
-const button = document.querySelector("button");
+const button = document.querySelector(".button");
 const messageContainer = document.querySelector(".messageContainer");
 
 const checkLength = (value, len) => {

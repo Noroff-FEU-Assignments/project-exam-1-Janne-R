@@ -1,4 +1,5 @@
 import getImageUrl from "./lib/getImageUrl.js";
+import getCategoryName from "./lib/getCategoryName.js";
 
 const detailContainer = document.querySelector(".specific-section");
 
@@ -26,8 +27,9 @@ async function getBlogPost() {
 await getBlogPost();
 
 
-function createHtml(details) {
+async function createHtml(details) {
   document.title = document.title + " " + details.title.rendered;
+  const categoryName = await getCategoryName(details.categories[0]);
   detailContainer.innerHTML = `
   <p class="date">${details.date}</p>
   <h1>${details.title.rendered}</h1>
@@ -39,7 +41,9 @@ function createHtml(details) {
     <img class="modal-content img01">
     <div class="caption"></div>
   </div>
+  <p><i class="far fa-clock"></i>${categoryName}</p>
   <p>${details.content.rendered}</p>
+ 
 
   `;
 
@@ -74,7 +78,7 @@ const fullName = document.querySelector("#name");
 const nameError = document.querySelector("#nameError");
 const email = document.querySelector("#email");
 const emailError = document.querySelector("#emailError");
-const button = document.querySelector("button");
+const button = document.querySelector(".button");
 const messageContainer = document.querySelector(".messageContainer");
 
 const validMessage = () => {
@@ -133,6 +137,15 @@ const validateForm = () => {
 message.addEventListener("keyup", validateForm);
 fullName.addEventListener("keyup", validateForm);
 email.addEventListener("keyup", validateForm);
+
+/* 1. lag en sendComment funksjon
+   2. funksjonen kan få ta inn ett parameter med navn "comment"
+   3. comment parametert skal være et "kommentar objekt" som inkluderer feltene
+       post, content, author_email, author_name
+   4. google "mdn fetch post", for fetch skal fortsatt brukes, men trenger å brukes
+      på en litt annen måte når man ikke bare skal gjøre en enkel GET
+      
+*/
 
 function submitForm(event) {
   event.preventDefault();
