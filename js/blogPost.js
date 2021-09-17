@@ -26,6 +26,7 @@ async function viewBlogPosts() {
   pageNumber++;
 
   viewPosts(currentPage, blogPosts);
+  document.querySelector(".loader").style.display = "none";
 }
 
 viewBlogPosts();
