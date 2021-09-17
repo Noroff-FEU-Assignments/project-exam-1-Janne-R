@@ -31,6 +31,10 @@
   cursor: pointer;
 }
 
+.section-block {
+  margin: 40px 0px;
+}
+
 .latest-posts {
   grid-template-columns: 1fr;
   width: 100%;
@@ -39,6 +43,8 @@
 .carousel {
   display: flex;
   justify-content: center;
+  min-height: 378px;
+  margin-bottom: 40px;
 }
 
 .carousel-button-left,
