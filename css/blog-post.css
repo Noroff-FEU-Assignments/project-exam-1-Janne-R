@@ -31,3 +31,7 @@ label {
 input {
   margin-right: 10px;
 }
+
+.loader-blog-post {
+  top: 50%;
+}

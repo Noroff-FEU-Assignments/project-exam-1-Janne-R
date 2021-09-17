@@ -33,7 +33,7 @@ function showCarousel(startPos, endPos) {
   latestPosts.innerHTML = "";
 
   viewPosts(activeSelection, latestPosts);
-  document.querySelector(".loader").style.display = "none";
+  document.querySelector(".loader-container").style.display = "none";
 }
 
 let startPos = 0;

@@ -206,6 +206,14 @@ button {
   color: black;
 }
 
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+}
+
 .loader {
   border: 16px solid #f3f3f3; /* Light grey */
   border-top: 16px solid var(--color-primary);
@@ -214,9 +222,6 @@ button {
   height: 120px;
   margin: -76px 0 0 -76px;
   animation: spin 2s linear infinite;
-  position: absolute;
-  left: 50%;
-  top: 50%;
 }
 
 @keyframes spin {
