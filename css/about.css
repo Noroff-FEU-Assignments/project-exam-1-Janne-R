@@ -15,7 +15,11 @@
 
 .content-block-recipe h3,
 h4 {
-  margin-top: 40px;
+  margin: 40px 0;
+}
+
+.recipe-block {
+  margin-bottom: 40px;
 }
 
 .recipe-block li {

@@ -15,7 +15,7 @@ async function getBlogPost() {
     const response = await fetch(url);
     const blogPost = await response.json();
 
-    createHtml(blogPost);
+    await createHtml(blogPost);
 
   } catch (error) {
     console.error(error);
@@ -30,21 +30,19 @@ await getBlogPost();
 async function createHtml(details) {
   document.title = document.title + " " + details.title.rendered;
   const categoryName = await getCategoryName(details.categories[0]);
+
   detailContainer.innerHTML = `
   <p class="date">${details.date}</p>
   <h1>${details.title.rendered}</h1>
   <p>${details.excerpt.rendered}</p>
-  
+  <p><i class="far fa-clock"></i>${categoryName}</p>
   <img class="modalImg" src="${getImageUrl("full", details.featured_media, details._embedded["wp:featuredmedia"])}" alt="${details.title.rendered}" style="width:100%">
   <div class="modal">
     <button class="close"><i class="fas fa-times"></i></button>
     <img class="modal-content img01">
     <div class="caption"></div>
   </div>
-  <p><i class="far fa-clock"></i>${categoryName}</p>
   <p>${details.content.rendered}</p>
- 
-
   `;
 
 }
@@ -61,6 +59,7 @@ img.onclick = function () {
   captionText.innerHTML = this.alt;
 }
 
+
 closeButton.onclick = function () {
   modal.style.display = "none";
 }
@@ -70,6 +69,7 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 }
+
 
 const form = document.querySelector("form");
 const message = document.querySelector("#message");
