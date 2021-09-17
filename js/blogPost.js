@@ -50,13 +50,19 @@ async function getPostsByCategory(categoryId) {
 //Filter
 const filterButton = document.querySelector(".button-filter");
 const filterList = document.querySelector(".filters");
+const icon = document.querySelector("#icon-filter");
 
 filterList.addEventListener("click", event => {
   const categoryId = event.target.id;
 
-  getPostsByCategory(categoryId);
-});
+  setTimeout(function () {
+    filterList.classList.toggle("show");
+    icon.className = "fas fa-check";
+  }, 500)
 
+  getPostsByCategory(categoryId);
+
+});
 
 filterButton.addEventListener("click", () => {
   filterList.classList.toggle("show");
