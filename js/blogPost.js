@@ -1,5 +1,4 @@
-import getImageUrl from "./lib/getImageUrl.js";
-import getCategoryName from "./lib/getCategoryName.js";
+import viewPosts from "./components/viewPosts.js";
 
 const blogPosts = document.querySelector(".blog-posts");
 const baseUrl = "https://familykitchen.janne-ringdal.one/wp-json/wp/v2";
@@ -26,22 +25,7 @@ async function viewBlogPosts() {
   const currentPage = await getPosts(pageNumber);
   pageNumber++;
 
-  currentPage.forEach(async function (post) {
-    const categoryName = await getCategoryName(post.categories[0]);
-
-    blogPosts.innerHTML += `
-    <div class="post">
-    <a href="blog-specific.html?id=${post.id}">
-    <div class="blog-post-image" style="background-image: url(${getImageUrl("medium", post.featured_media, post._embedded["wp:featuredmedia"])})"></div>
-  <div class="post-text">
-    <h2>${post.title.rendered}</h2>
-  <p>${post.excerpt.rendered}</p>
-  <p><i class="far fa-clock"></i>${categoryName}</p>
-  </div>
-  </a>
-  </div>
-  `;
-  });
+  viewPosts(currentPage, blogPosts);
 }
 
 viewBlogPosts();
@@ -55,22 +39,8 @@ async function getPostsByCategory(categoryId) {
 
     blogPosts.innerHTML = "";
 
-    posts.forEach(async function (post) {
-      const categoryName = await getCategoryName(post.categories[0]);
+    viewPosts(posts, blogPosts);
 
-      blogPosts.innerHTML += `
-      <div class="post">
-      <a href="blog-specific.html?id=${post.id}">
-      <div class="blog-post-image" style="background-image: url(${getImageUrl("medium", post.featured_media, post._embedded["wp:featuredmedia"])})"></div>
-    <div class="post-text">
-      <h2>${post.title.rendered}</h2>
-    <p>${post.excerpt.rendered}</p>
-    <p><i class="far fa-clock"></i>${categoryName}</p>
-    </div>
-    </a>
-    </div>
-    `;
-    });
   } catch (error) {
     console.error(error);
 
