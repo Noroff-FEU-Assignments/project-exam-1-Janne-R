@@ -184,6 +184,10 @@ button {
   margin-bottom: 20px;
 }
 
+.button {
+  margin-bottom: 40px;
+}
+
 .fa-chevron-right,
 .fa-plus {
   margin-left: 40px;
