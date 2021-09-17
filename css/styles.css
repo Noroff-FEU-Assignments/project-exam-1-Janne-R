@@ -18,12 +18,11 @@ h1 {
   text-transform: uppercase;
 }
 
-h2,
-h3 {
+h2 {
   font-size: 21px;
 }
 
-h4 {
+h3 {
   font-size: 18px;
 }
 

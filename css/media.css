@@ -113,7 +113,7 @@
   .blog-post-section {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
   }
 
   .blog-post-section .button-filter {
