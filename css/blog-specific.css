@@ -85,3 +85,7 @@
 .specific-section {
   min-height: 700px;
 }
+
+.loader-spesific {
+  top: 30%;
+}

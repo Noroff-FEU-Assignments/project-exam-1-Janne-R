@@ -35,7 +35,7 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  .loader-blog-post {
+  .loader-blog {
     top: 70%;
   }
 
@@ -136,7 +136,7 @@
     height: 150px;
   }
 
-  .loader-blog-post {
+  .loader-blog {
     top: 50%;
   }
 
