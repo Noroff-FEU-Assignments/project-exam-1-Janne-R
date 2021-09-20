@@ -35,6 +35,10 @@
     grid-template-columns: 1fr 1fr;
   }
 
+  .loader-blog-post {
+    top: 70%;
+  }
+
   /*blog-post-spesific-page*/
 
   /*modal*/
@@ -130,6 +134,10 @@
 
   .blog-post-image {
     height: 150px;
+  }
+
+  .loader-blog-post {
+    top: 50%;
   }
 
   /*blog-post-spesific-page*/

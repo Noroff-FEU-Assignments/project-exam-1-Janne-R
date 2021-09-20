@@ -215,9 +215,9 @@ button {
 }
 
 .loader-blog-post {
-  top: 50%;
+  top: 76%;
   position: absolute;
-  left: 50%;
+  left: 40%;
   margin: -50px 0px 0px -50px;
 }
 
