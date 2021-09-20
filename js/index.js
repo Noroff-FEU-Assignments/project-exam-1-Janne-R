@@ -37,43 +37,43 @@ function showCarousel(startPos, endPos) {
 
 }
 
-let startPos = 0;
-let endPos = 1;
-let numberOfPosts = 1;
-
-function updateForDevice() {
+function getPostsForDevice() {
   if (window.innerWidth < 480) {
-    numberOfPosts = 1;
-    endPos = 1;
-    showCarousel(startPos, endPos);
+    return 1;
   } else if (window.innerWidth > 480 && window.innerWidth <= 800) {
-    numberOfPosts = 2;
-    endPos = 2;
-    showCarousel(startPos, endPos);
+    return 2;
   } else if (window.innerWidth > 800) {
-    numberOfPosts = 4;
-    endPos = 4;
-    showCarousel(startPos, endPos);
+    return 4;
   }
 }
 
-updateForDevice();
+function updateForDevice(numPosts) {
+  numberOfPosts = numPosts;
+  endPos = numPosts;
 
+  showCarousel(startPos, endPos);
+}
+
+let startPos = 0;
+let endPos = getPostsForDevice();
+let numberOfPosts = getPostsForDevice();
+
+updateForDevice(numberOfPosts);
 
 function goNext() {
-  startPos = startPos + numberOfPosts;
-  endPos = endPos + numberOfPosts;
+  if (endPos + numberOfPosts <= postResult.length) {
+    startPos = startPos + numberOfPosts;
+    endPos = endPos + numberOfPosts;
 
-  if (endPos <= postResult.length) {
     showCarousel(startPos, endPos);
   }
 }
 
 function goPrevious() {
-  startPos = startPos - numberOfPosts;
-  endPos = endPos - numberOfPosts;
+  if (startPos - numberOfPosts >= 0) {
+    startPos = startPos - numberOfPosts;
+    endPos = endPos - numberOfPosts;
 
-  if (startPos >= 0) {
     showCarousel(startPos, endPos);
   }
 }
@@ -81,5 +81,11 @@ function goPrevious() {
 arrowRightButton.addEventListener("click", goNext);
 arrowLeftButton.addEventListener("click", goPrevious);
 
-window.addEventListener('resize', updateForDevice);
+window.addEventListener('resize', () => {
+  const newNumberOfPosts = getPostsForDevice();
+
+  if (numberOfPosts !== newNumberOfPosts) {
+    updateForDevice(newNumberOfPosts);
+  }
+});
 
