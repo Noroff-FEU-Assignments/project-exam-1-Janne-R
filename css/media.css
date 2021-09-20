@@ -30,11 +30,7 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  .loader-blog {
-    top: 70%;
-  }
-
-  /*blog-post-spesific-page*/
+  /*blog-post-specific-page*/
 
   /*modal*/
   .img01 {
@@ -131,11 +127,7 @@
     height: 150px;
   }
 
-  .loader-blog {
-    top: 50%;
-  }
-
-  /*blog-post-spesific-page*/
+  /*blog-post-specific-page*/
 
   /*modal*/
   .modalImg {

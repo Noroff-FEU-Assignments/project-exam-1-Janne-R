@@ -219,9 +219,10 @@ button {
 }
 
 .loader-blog {
-  position: absolute;
-  left: 40%;
-  margin: -50px 0px 0px -50px;
+  position: inherit;
+  display: flex;
+  justify-content: center;
+  padding: 16px 0;
 }
 
 .loader {
