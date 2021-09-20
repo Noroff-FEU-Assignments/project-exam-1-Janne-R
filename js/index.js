@@ -59,6 +59,7 @@ function updateForDevice() {
 
 updateForDevice();
 
+
 function goNext() {
   startPos = startPos + numberOfPosts;
   endPos = endPos + numberOfPosts;
