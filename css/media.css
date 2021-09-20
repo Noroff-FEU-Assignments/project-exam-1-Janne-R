@@ -26,11 +26,6 @@
     margin-left: 10px;
   }
 
-  /*blog-post-page*/
-  .blog-post-image {
-    height: 280px;
-  }
-
   .latest-posts {
     grid-template-columns: 1fr 1fr;
   }
