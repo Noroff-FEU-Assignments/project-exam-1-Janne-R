@@ -66,6 +66,10 @@ main {
   outline: none;
 }
 
+.fa-bars {
+  font-size: x-large;
+}
+
 .nav-ul {
   display: none;
   flex-direction: column;
