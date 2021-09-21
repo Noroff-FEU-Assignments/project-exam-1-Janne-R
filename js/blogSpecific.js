@@ -217,8 +217,7 @@ function viewComments(comments) {
   comments.forEach(function (comment) {
     commentsContainer.innerHTML += `
     <div>
-    <h2>Comments on this post</h2>
-  <p>${comment.author_name}</p>
+  <h4>${comment.author_name}</h4>
   <p>${comment.content.rendered}</p>
   <p>${comment.date_gmt}</p>
   </div>
