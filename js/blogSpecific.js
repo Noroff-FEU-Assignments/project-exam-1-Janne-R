@@ -147,9 +147,44 @@ email.addEventListener("keyup", validateForm);
       
 */
 
+//send comments
+//async function createHtml(details) 
+
+async function sendComment(comment) {
+  try {
+    const rawResponse = await fetch('https://familykitchen.janne-ringdal.one/wp-json/wp/v2/comments', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(comment)
+    });
+
+    const content = await rawResponse.json();
+    console.log("COMMENT SENT")
+  } catch (error) {
+
+  }
+}
+
+
+
+
+
 function submitForm(event) {
   event.preventDefault();
   messageContainer.innerHTML = '<div class="formMessage">Your comment has been posted</div>';
+  // 1. send inn hardkodet comment objekt.
+  // 2.0 her er post iden const id = params.get("id");
+  // 2. bygg opp et comment objekt ved å hente ut verdien i blant annet message feltet osv const comment = { content: message.something.here, p}
+  const comment = {
+    post: id,
+    author_name: fullName.value,
+    content: message.value
+  }
+  console.log(comment);
+
+  sendComment(comment);
 
   form.reset();
   button.disabled = true;
@@ -160,4 +195,37 @@ form.addEventListener("submit", submitForm);
 
 
 
+const commentsContainer = document.querySelector(".comments");
 
+
+async function getComments() {
+  try {
+    const response = await fetch(`https://familykitchen.janne-ringdal.one/wp-json/wp/v2/comments?post=${id}`);
+    const comments = await response.json();
+
+    console.log(comments);
+
+    return comments;
+  } catch (error) {
+    console.error(error);
+    comments.innerHTML = "error";
+
+  }
+}
+
+function viewComments(comments) {
+  comments.forEach(function (comment) {
+    commentsContainer.innerHTML += `
+    <div>
+    <h2>Comments on this post</h2>
+  <p>${comment.author_name}</p>
+  <p>${comment.content.rendered}</p>
+  <p>${comment.date_gmt}</p>
+  </div>
+  `;
+  });
+}
+
+const comments = await getComments();
+
+viewComments(comments);
