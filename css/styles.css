@@ -201,8 +201,8 @@ button {
   margin-right: 0px;
 }
 
-.avoid-sticky-header {
-  scroll-margin-top: 120px;
+.messageContainer {
+  scroll-margin-top: 70px;
 }
 
 .button:disabled {
