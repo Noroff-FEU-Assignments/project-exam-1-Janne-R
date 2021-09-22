@@ -201,7 +201,7 @@ button {
   margin-right: 0px;
 }
 
-.messageContainer {
+.avoid-sticky-header {
   scroll-margin-top: 70px;
 }
 
