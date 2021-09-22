@@ -1,24 +1,24 @@
 import viewPosts from "./components/viewPosts.js";
 
-(async function () {
-  const latestPosts = document.querySelector(".latest-posts");
-  const baseUrl = "https://familykitchen.janne-ringdal.one/wp-json/wp/v2";
+const latestPosts = document.querySelector(".latest-posts");
+const baseUrl = "https://familykitchen.janne-ringdal.one/wp-json/wp/v2";
 
-  async function getPosts() {
-    try {
-      const response = await fetch(`${baseUrl}/posts?_embed&per_page=12`);
-      const json = await response.json();
+async function getPosts() {
+  try {
+    const response = await fetch(`${baseUrl}/posts?_embed&per_page=12`);
+    const json = await response.json();
 
-      return json;
-    } catch (error) {
-      blogPosts.innerHTML = "error";
+    return json;
+  } catch (error) {
+    blogPosts.innerHTML = "error";
 
-    }
   }
+}
 
-  const arrowLeftButton = document.querySelector(".carousel-button-left");
-  const arrowRightButton = document.querySelector(".carousel-button-right");
+const arrowLeftButton = document.querySelector(".carousel-button-left");
+const arrowRightButton = document.querySelector(".carousel-button-right");
 
+async function viewPage() {
   const postResult = await getPosts();
 
   let oldPosition = 0;
@@ -90,5 +90,6 @@ import viewPosts from "./components/viewPosts.js";
   });
 
 
-})();
+}
 
+viewPage();
