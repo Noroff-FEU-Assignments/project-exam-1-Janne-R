@@ -30,8 +30,6 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  /*blog-post-specific-page*/
-
   /*modal*/
   .img01 {
     height: 70vh;
@@ -105,7 +103,6 @@
   }
 
   /*blog-post page*/
-
   .blog-post-section {
     display: flex;
     justify-content: space-between;
@@ -126,8 +123,6 @@
   .blog-post-image {
     height: 150px;
   }
-
-  /*blog-post-specific-page*/
 
   /*modal*/
   .modalImg {
