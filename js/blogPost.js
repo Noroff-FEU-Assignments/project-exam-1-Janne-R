@@ -4,7 +4,6 @@ const blogPosts = document.querySelector(".blog-posts");
 const baseUrl = "https://familykitchen.janne-ringdal.one/wp-json/wp/v2";
 const button = document.querySelector(".button");
 
-
 async function getPosts(pageNumber) {
   try {
     const response = await fetch(`${baseUrl}/posts?page=${pageNumber}&_embed`);
@@ -13,7 +12,6 @@ async function getPosts(pageNumber) {
     return json;
 
   } catch (error) {
-    console.error(error);
     blogPosts.innerHTML = "error";
 
   }
@@ -43,7 +41,6 @@ async function getPostsByCategory(categoryId) {
     viewPosts(posts, blogPosts);
 
   } catch (error) {
-    console.error(error);
 
   }
 }

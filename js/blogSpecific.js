@@ -19,14 +19,12 @@ import getCategoryName from "./lib/getCategoryName.js";
       await createHtml(blogPost);
 
     } catch (error) {
-      console.error(error);
       detailContainer.innerHTML = "error";
     }
 
   }
 
   await getBlogPost();
-
 
   async function createHtml(details) {
     document.title = document.title + " " + details.title.rendered;
@@ -60,7 +58,6 @@ import getCategoryName from "./lib/getCategoryName.js";
     captionText.innerHTML = this.alt;
   }
 
-
   closeButton.onclick = function () {
     modal.style.display = "none";
   }
@@ -70,7 +67,6 @@ import getCategoryName from "./lib/getCategoryName.js";
       modal.style.display = "none";
     }
   }
-
 
   const form = document.querySelector("form");
   const message = document.querySelector("#message");
@@ -139,18 +135,6 @@ import getCategoryName from "./lib/getCategoryName.js";
   fullName.addEventListener("keyup", validateForm);
   email.addEventListener("keyup", validateForm);
 
-  /* 1. lag en sendComment funksjon
-     2. funksjonen kan få ta inn ett parameter med navn "comment"
-     3. comment parametert skal være et "kommentar objekt" som inkluderer feltene
-         post, content, author_email, author_name
-     4. google "mdn fetch post", for fetch skal fortsatt brukes, men trenger å brukes
-        på en litt annen måte når man ikke bare skal gjøre en enkel GET
-        
-  */
-
-  //send comments
-  //async function createHtml(details) 
-
   async function sendComment(comment) {
     try {
       const rawResponse = await fetch('https://familykitchen.janne-ringdal.one/wp-json/wp/v2/comments', {
@@ -162,28 +146,20 @@ import getCategoryName from "./lib/getCategoryName.js";
       });
 
       const content = await rawResponse.json();
-      console.log("COMMENT SENT")
     } catch (error) {
 
     }
   }
 
-
-
-
-
   function submitForm(event) {
     event.preventDefault();
     messageContainer.innerHTML = '<div class="formMessage">Your comment has been posted</div>';
-    // 1. send inn hardkodet comment objekt.
-    // 2.0 her er post iden const id = params.get("id");
-    // 2. bygg opp et comment objekt ved å hente ut verdien i blant annet message feltet osv const comment = { content: message.something.here, p}
+
     const comment = {
       post: id,
       author_name: fullName.value,
       content: message.value
     }
-    console.log(comment);
 
     sendComment(comment);
 
@@ -194,21 +170,15 @@ import getCategoryName from "./lib/getCategoryName.js";
 
   form.addEventListener("submit", submitForm);
 
-
-
   const commentsContainer = document.querySelector(".comments");
-
 
   async function getComments() {
     try {
       const response = await fetch(`https://familykitchen.janne-ringdal.one/wp-json/wp/v2/comments?post=${id}`);
       const comments = await response.json();
 
-      console.log(comments);
-
       return comments;
     } catch (error) {
-      console.error(error);
       comments.innerHTML = "error";
 
     }

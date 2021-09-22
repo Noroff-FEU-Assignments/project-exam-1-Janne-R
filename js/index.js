@@ -11,7 +11,6 @@ import viewPosts from "./components/viewPosts.js";
 
       return json;
     } catch (error) {
-      console.error(error);
       blogPosts.innerHTML = "error";
 
     }

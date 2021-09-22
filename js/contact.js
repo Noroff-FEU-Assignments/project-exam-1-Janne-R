@@ -92,7 +92,6 @@ async function sendContactForm(contactData) {
       body: formData
     });
   } catch (error) {
-    console.error(error);
   }
 }
 
