@@ -1,6 +1,9 @@
 .date {
+  font-style: italic;
+}
+
+.date-top {
   margin-top: 50px;
-  font-weight: 100;
 }
 
 .specific-section h1 {

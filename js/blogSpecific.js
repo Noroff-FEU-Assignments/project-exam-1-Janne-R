@@ -15,7 +15,7 @@ async function createHtml(details) {
   const categoryName = await getCategoryName(details.categories[0]);
 
   detailContainer.innerHTML = `
-      <p class="date">${details.date}</p>
+      <p class="date date-top">Publication date: ${details.date.slice(0, 10)}</p>
       <h1>${details.title.rendered}</h1>
       <p>${details.excerpt.rendered}</p>
       <p><i class="far fa-clock"></i>${categoryName}</p>
@@ -189,7 +189,7 @@ async function viewComments() {
     <div>
   <h4>${comment.author_name}</h4>
   <p>${comment.content.rendered}</p>
-  <p>${comment.date_gmt}</p>
+  <p class="date">Published: ${comment.date.slice(0, 10)}</p>
   </div>
   `;
   });
