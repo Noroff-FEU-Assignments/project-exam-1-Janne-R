@@ -24,7 +24,7 @@ async function getBlogPost() {
 
 }
 
-getBlogPost();
+await getBlogPost();
 
 
 async function createHtml(details) {
