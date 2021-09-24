@@ -2,7 +2,7 @@ import viewPosts from "./components/viewPosts.js";
 
 const blogPosts = document.querySelector(".blog-posts");
 const baseUrl = "https://familykitchen.janne-ringdal.one/wp-json/wp/v2";
-const button = document.querySelector(".button");
+const viewMoreButton = document.querySelector(".button");
 
 async function getPosts(pageNumber) {
   try {
@@ -29,7 +29,7 @@ async function viewBlogPosts() {
 
 viewBlogPosts();
 
-button.addEventListener("click", viewBlogPosts);
+viewMoreButton.addEventListener("click", viewBlogPosts);
 
 async function getPostsByCategory(categoryId) {
   try {
