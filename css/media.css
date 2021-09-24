@@ -29,11 +29,6 @@
   .latest-posts {
     grid-template-columns: 1fr 1fr;
   }
-
-  /*modal*/
-  .content-img {
-    height: 70vh;
-  }
 }
 
 @media (min-width: 800px) {
