@@ -41,7 +41,7 @@ main {
 
 /*header*/
 .header-sticky {
-  background-color: white;
+  background-color: var(--color-white);
   position: sticky;
   top: 0;
   z-index: 2;
@@ -80,7 +80,7 @@ main {
   position: absolute;
   top: 48px;
   right: 0px;
-  background: white;
+  background: var(--color-white);
 }
 
 .menu-link {
@@ -127,10 +127,6 @@ main {
 }
 
 /*blog-post*/
-.post {
-  background-color: white;
-}
-
 .blog-posts {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -180,7 +176,7 @@ textarea {
 
 .formMessage {
   background: green;
-  color: white;
+  color: var(--color-white);
   padding: 1rem;
   border-radius: 1rem;
   margin-bottom: 1rem;
