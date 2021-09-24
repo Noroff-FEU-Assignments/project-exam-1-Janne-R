@@ -11,13 +11,13 @@
 }
 
 .modalImg,
-.img01 {
+.content-img {
   width: 100%;
   object-fit: cover;
   height: 40vh;
 }
 
-.img01 {
+.content-img {
   width: 100%;
   object-fit: cover;
   height: 50vh;

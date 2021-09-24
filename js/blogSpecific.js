@@ -22,7 +22,7 @@ async function createHtml(details) {
       <img class="modalImg" src="${getImageUrl("full", details.featured_media, details._embedded["wp:featuredmedia"])}" alt="${details.title.rendered}" style="width:100%">
       <div class="modal">
         <button class="close"><i class="fas fa-times"></i></button>
-        <img class="modal-content img01">
+        <img class="modal-content content-img">
         <div class="caption"></div>
       </div>
       <p>${details.content.rendered}</p>
@@ -30,7 +30,7 @@ async function createHtml(details) {
 
   var modal = document.querySelector(".modal");
   var img = document.querySelector(".modalImg");
-  var modalImg = document.querySelector(".img01");
+  var modalImg = document.querySelector(".content-img");
   var captionText = document.querySelector(".caption");
   var closeButton = document.querySelector(".close");
 

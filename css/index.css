@@ -16,21 +16,6 @@
   margin-right: 120px;
 }
 
-.header-button {
-  background-color: #fb6e4a;
-  border-radius: 100px;
-  padding: 10px;
-  height: 20px;
-  text-transform: uppercase;
-  text-decoration-line: none;
-  color: black;
-  font-family: var(--header-font);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-}
-
 .section-latest-post {
   margin: 40px 0px;
 }

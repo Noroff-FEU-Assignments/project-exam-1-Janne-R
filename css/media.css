@@ -16,7 +16,7 @@
     min-height: 462px;
   }
 
-  /*about-site*/
+  /*about-page*/
   .content-intro {
     display: flex;
     align-items: flex-end;
@@ -31,7 +31,7 @@
   }
 
   /*modal*/
-  .img01 {
+  .content-img {
     height: 70vh;
   }
 }
@@ -133,7 +133,7 @@
     max-width: 90%;
   }
 
-  .img01 {
+  .content-img {
     height: 80vh;
   }
 
