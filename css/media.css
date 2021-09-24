@@ -121,15 +121,11 @@
 
   /*modal*/
   .modalImg {
-    height: 75vh;
+    height: 65vh;
   }
 
   .modal-content {
     max-width: 90%;
-  }
-
-  .content-img {
-    height: 80vh;
   }
 
   /*footer*/
